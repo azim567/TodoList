@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="welcome_message">Hey! Whats Your plan for Today</string>
+    <string name="hint_input">Type something</string>
+</resources>
