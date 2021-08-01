@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E8E9F6"
-        tools:context=".MainActivity">
+        tools:context=".ui.MainActivity">
 
         <View
             android:id="@+id/header"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:translationY="20dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             app:layout_constraintBottom_toBottomOf="@id/header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
@@ -50,11 +50,12 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/inputCard"
                 android:layout_width="0dp"
+                setCardColor="true"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:layout_marginRight="5dp"
-                app:cardMaxElevation="2dp"
-                app:cardCornerRadius="4dp"
+                app:cardMaxElevation="1dp"
+                app:cardCornerRadius="2dp"
                 android:outlineAmbientShadowColor="@color/teal_700"
                 app:layout_constraintEnd_toStartOf="@+id/addBtn"
                 app:layout_constraintTop_toTopOf="@id/inputLayout"
@@ -87,22 +88,20 @@
                 app:fabSize="mini"
                 app:layout_constraintBottom_toBottomOf="@id/inputCard"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/inputCard" />
-
-
+                app:layout_constraintTop_toTopOf="@id/inputCard"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/todoRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="30dp"
             android:padding="8dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@+id/inputLayout"
-            tools:listitem="@layout/todo_item_row" />
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/task_item_row"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
